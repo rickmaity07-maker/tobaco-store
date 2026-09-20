@@ -38,10 +38,10 @@ export function IntroReveal() {
           style={{ clipPath: "circle(150% at 50% 50%)" }}
         >
           <div
-            className="pointer-events-none absolute inset-0 opacity-70 sm:hidden"
+            className="pointer-events-none absolute inset-0 sm:hidden"
             style={{
               background:
-                "radial-gradient(65% 55% at 50% 35%, rgba(139,92,246,0.4), transparent), radial-gradient(50% 40% at 50% 75%, rgba(34,211,238,0.25), transparent)",
+                "radial-gradient(80% 65% at 50% 30%, rgba(139,92,246,0.8), transparent), radial-gradient(65% 50% at 50% 80%, rgba(34,211,238,0.55), transparent), radial-gradient(100% 80% at 50% 55%, rgba(139,92,246,0.3), transparent)",
             }}
           />
           <div className="pointer-events-none absolute inset-0 hidden sm:block" style={{ contain: "paint" }}>

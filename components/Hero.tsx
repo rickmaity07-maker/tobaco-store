@@ -24,10 +24,10 @@ export function Hero() {
       {/* SVG feTurbulence/feDisplacementMap filters are unreliable and expensive
           on mobile WebKit, so phones get a cheap static glow instead. */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-70 sm:hidden"
+        className="pointer-events-none absolute inset-0 sm:hidden"
         style={{
           background:
-            "radial-gradient(60% 50% at 75% 30%, rgba(139,92,246,0.35), transparent), radial-gradient(50% 40% at 30% 80%, rgba(34,211,238,0.2), transparent)",
+            "radial-gradient(75% 65% at 78% 25%, rgba(139,92,246,0.75), transparent), radial-gradient(65% 55% at 22% 85%, rgba(34,211,238,0.5), transparent), radial-gradient(90% 70% at 50% 55%, rgba(139,92,246,0.25), transparent)",
         }}
       />
 
