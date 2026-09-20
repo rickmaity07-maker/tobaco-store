@@ -37,7 +37,14 @@ export function IntroReveal() {
           transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
           style={{ clipPath: "circle(150% at 50% 50%)" }}
         >
-          <div className="pointer-events-none absolute inset-0" style={{ contain: "paint" }}>
+          <div
+            className="pointer-events-none absolute inset-0 opacity-70 sm:hidden"
+            style={{
+              background:
+                "radial-gradient(65% 55% at 50% 35%, rgba(139,92,246,0.4), transparent), radial-gradient(50% 40% at 50% 75%, rgba(34,211,238,0.25), transparent)",
+            }}
+          />
+          <div className="pointer-events-none absolute inset-0 hidden sm:block" style={{ contain: "paint" }}>
             <RealisticSmoke
               className="absolute inset-0 h-full w-full"
               plumes={5}
@@ -61,9 +68,9 @@ export function IntroReveal() {
             />
           </div>
 
-          <div className="relative flex flex-col items-center">
+          <div className="relative flex flex-col items-center px-4">
             <div
-              className="flex items-center gap-3 font-display text-5xl font-bold uppercase tracking-tight text-ink sm:text-7xl lg:text-8xl"
+              className="flex flex-wrap items-center justify-center gap-2 font-display text-4xl font-bold uppercase tracking-tight text-ink sm:gap-3 sm:text-7xl lg:text-8xl"
               style={{ perspective: 600 }}
             >
               <span className="flex" style={{ textShadow: TEXT_GLOW }}>

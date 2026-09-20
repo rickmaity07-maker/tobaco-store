@@ -70,7 +70,7 @@ export function Nav() {
 
         <motion.button
           whileTap={{ scale: 0.9 }}
-          className="text-ink lg:hidden"
+          className="-mr-2 p-2 text-ink lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
         >
@@ -109,7 +109,7 @@ export function Nav() {
                   <a
                     href={`#${c.id}`}
                     onClick={() => setOpen(false)}
-                    className="glow-text-sm block py-2 font-display text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted hover:text-ember-strong"
+                    className="glow-text-sm block py-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted hover:text-ember-strong"
                   >
                     {c.label}
                   </a>

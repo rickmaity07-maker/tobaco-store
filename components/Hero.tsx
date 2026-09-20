@@ -21,8 +21,18 @@ export function Hero() {
 
   return (
     <section id="top" className="relative overflow-hidden border-b border-line bg-bg" style={{ perspective: 1000 }}>
+      {/* SVG feTurbulence/feDisplacementMap filters are unreliable and expensive
+          on mobile WebKit, so phones get a cheap static glow instead. */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-70 sm:hidden"
+        style={{
+          background:
+            "radial-gradient(60% 50% at 75% 30%, rgba(139,92,246,0.35), transparent), radial-gradient(50% 40% at 30% 80%, rgba(34,211,238,0.2), transparent)",
+        }}
+      />
+
       {!reduce && (
-        <div className="pointer-events-none absolute inset-0" style={{ contain: "paint" }}>
+        <div className="pointer-events-none absolute inset-0 hidden sm:block" style={{ contain: "paint" }}>
           <RealisticSmoke
             className="absolute inset-0 h-full w-full mix-blend-screen opacity-90"
             plumes={4}
